@@ -61,7 +61,7 @@ class Student:
         bg_img=Label(self.root,image=self.photoimg3)
         bg_img.place(x=0,y=130,width=1530,height=710)
 
-        title_lbl=Label(bg_img,text="FACE RECOGNITION ATTENDENCE SYSTEM SOFTWARE",font=("tin"))
+        title_lbl=Label(bg_img,text="STUDENT DETAILS",font=("times new roman",35,"bold"),bg="white",fg="red")
         title_lbl.place(x=0.,y=0,width=1530,height=45)
 
         def time():
@@ -90,6 +90,7 @@ class Student:
         #current course
         current_course_frame=LabelFrame(Left_frame,bd=2,relief=RIDGE,text="Current Course Information", font=("times new roman",12,"bold"))
         current_course_frame.place(x=5,y=135,width=720,height=150)
+        
         #Department
         dep_label=Label(current_course_frame,text="Department",font=("times new roman",12,"bold"),bg="white")
         dep_label.grid(row=0,column=0,padx=10)
@@ -320,7 +321,8 @@ class Student:
         self.student_table.bind("<ButtonRelease>",self.get_cursor)
         self.fetch_data()
 
-        #function declaration
+    #function declaration
+
     def add_data(self):
         if self.var_dep.get()=="Select Department" or self.var_std_name.get()=="" or self.var_std_id=="":
             messagebox.showerror("Error","All fields are required",parent=self.root)
@@ -336,7 +338,7 @@ class Student:
                 conn.commit()
                 self.fetch_data()
                 conn.close()
-                messagebox.showinfo("Succes","Details added successfully",parent=self.root)
+                messagebox.showinfo("Success","Details added successfully",parent=self.root)
             except Exception as es:
                 messagebox.showerror("Error",f"Due To:{str(es)}",parent=self.root)
 
@@ -353,6 +355,7 @@ class Student:
                 self.student_table.insert("",END,values=i)
             conn.commit()
         conn.close()
+        
     #get cursor
     def get_cursor(self,event=""):
         cursor_focus=self.student_table.focus()
@@ -454,11 +457,12 @@ class Student:
                 id=0
                 for x in myresult:
                     id+=1
-                my_cursor.execute("Update student set Dep=%s, Course=%s, Year=%s, Semester=%s, Division=%s, Roll_No=%s, Gender=%s, Dob=%s, Email=%s, Phone=%s, Address=%s, Teacher=%s, Photo_Sample=%s where Student_id=%s",(
+                my_cursor.execute("Update student set Dep=%s, Course=%s, Year=%s, Semester=%s,Name=%s, Division=%s, Roll_No=%s, Gender=%s, Dob=%s, Email=%s, Phone=%s, Address=%s, Teacher=%s, Photo_Sample=%s where Student_id=%s",(
                                                                                                                                 self.var_dep.get(),
                                                                                                                                 self.var_course.get(),
                                                                                                                                 self.var_year.get(),
                                                                                                                                 self.var_sem.get(),
+                                                                                                                                self.var_std_name.get(),
                                                                                                                                 self.var_div.get(),
                                                                                                                                 self.var_roll.get(),
                                                                                                                                 self.var_gender.get(),
@@ -469,7 +473,7 @@ class Student:
                                                                                                                                 self.var_teacher.get(),
                                                                                                                                 self.var_radio1.get(),
                                                                                                                                 self.var_std_id.get()==id+1
-                                                                                                                             )) 
+                                                                                                                            )) 
                 conn.commit()
                 self.fetch_data()
                 self.reset_data()

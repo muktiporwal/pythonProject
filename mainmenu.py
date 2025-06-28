@@ -13,10 +13,10 @@ from help import Help
 class Face_Recognition_System:
     def __init__(self,root):
         self.root=root
-        self.root.geometry("1530x790+0+0")
+        self.root.geometry("1550x800+0+0")
         self.root.title("face Recognition System")
+        
         #bg image
-
         img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\backg.jpg")
         img=img.resize((1550,800),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
@@ -105,8 +105,6 @@ class Face_Recognition_System:
 
         #developer button
 
-                #train face button
-
         img7=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\dev.png")
         img7=img7.resize((220,220),Image.LANCZOS)
         self.photoimg7=ImageTk.PhotoImage(img7)
@@ -137,7 +135,6 @@ class Face_Recognition_System:
     def student_details(self):
         self.new_window=Toplevel(self.root)
         self.app=Student(self.new_window) 
-
 
     def train_data(self):
         self.new_window=Toplevel(self.root)

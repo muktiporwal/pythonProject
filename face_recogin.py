@@ -28,7 +28,7 @@ class Face_Recognition:
         bg_img.place(x=0,y=0,width=1550,height=800)
 
         b1=Button(bg_img,text="Face Recognition",cursor="hand2",command=self.face_recog,font=("times new roman",18,"bold"),bg="blue",fg="white")
-        b1.place(x=490,y=620,width=200,height=40)
+        b1.place(x=670,y=720,width=200,height=40)
 
 
     #=========================attendance================================
@@ -67,7 +67,7 @@ class Face_Recognition:
                 my_cursor.execute("select Student_Id from student where Student_Id="+str(id))
                 i=my_cursor.fetchone()
                 if isinstance(i,(list,tuple)):
-                    i=''.join(i)
+                    i="+".join(i)
                 else:
                     i=str(i)
                 #if i:i=str(i[0])
@@ -75,7 +75,7 @@ class Face_Recognition:
                 my_cursor.execute("select Name from student where Student_Id="+str(id))
                 n=my_cursor.fetchone()
                 if isinstance(n,(list,tuple)):
-                    n=''.join(n)
+                    n="+".join(n)
                 else:
                     n=str(n)
                 #if n:n=str(n[0])
@@ -83,7 +83,7 @@ class Face_Recognition:
                 my_cursor.execute("select Roll_No from student where Student_Id="+str(id))
                 r=my_cursor.fetchone()
                 if isinstance(r,(list,tuple)):
-                    r=''.join(r)
+                    r="+".join(r)
                 else:
                     r=str(r)
                 #if r:r=str(r[0])
@@ -91,7 +91,7 @@ class Face_Recognition:
                 my_cursor.execute("select Dep from student where Student_Id="+str(id))
                 d=my_cursor.fetchone()
                 if isinstance(d,(list,tuple)):
-                    d=''.join(d)
+                    d="+".join(d)
                 else:
                     d=str(d)
                 #if d:d=str(d[0])
@@ -103,8 +103,8 @@ class Face_Recognition:
                     cv2.putText(img,f"Department:{d}",(x,y-5),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),3)
                     self.mark_attendance(i,r,n,d)
                 else:
-                    cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),3)
-                    cv2.putText(img,"Unknown Face",(x,y-55),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),3)
+                    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),3)
+                    cv2.putText(img,"Unknown Face",(x,y-5),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),3)
 
                 coord=[x,y,w,h]
 
@@ -120,11 +120,6 @@ class Face_Recognition:
         clf.read("classifier.xml")
 
         video_cap=cv2.VideoCapture(0)
-
-        '''if not video_cap.isOpened():
-            print("Error: Could not open webcam.")
-            messagebox.showerror("Webcam Error", "Failed to access webcam.")
-            return'''
 
         while True:
             ret,img=video_cap.read()

@@ -1,5 +1,4 @@
 from tkinter import*
-from tkinter import ttk
 from tkinter import messagebox
 from PIL import Image,ImageTk
 import cv2
@@ -33,7 +32,7 @@ class Train:
         ids=[]
 
         for image in path:
-            img=Image.open(image).convert('L') #gray scale image
+            img=Image.open(image).convert('L') 
             imageNp=np.array(img,'uint8')
             id=int(os.path.split(image)[1].split('.')[1])
 
@@ -48,7 +47,7 @@ class Train:
         clf.train(faces,ids)
         clf.write("classifier.xml")
         cv2.destroyAllWindows()
-        messagebox.showinfo("Result","Training datasets completed!!")   
+        messagebox.showinfo("Result","Training datasets completed!!")
 
 if __name__ == "__main__":
     root=Tk()

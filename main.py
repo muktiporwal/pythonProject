@@ -9,9 +9,9 @@ class Face_Recognition_Systemm:
     def __init__(self,root):
         self.root=root
         self.root.geometry("1530x790+0+0")
-        self.root.title("face Recognition System")
+        self.root.title("Face Recognition System")
+        
         #bg image
-
         img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\face.jpg")
         img=img.resize((1550,800),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
