@@ -49,7 +49,7 @@ class Attendance:
         bg_img.place(x=0,y=200,width=1530,height=710)
 
 
-        title_lbl=Label(bg_img,text="ATTENDENCE MANAGEMENT SYSTEM",font=("times new roman",24,"bold"))
+        title_lbl=Label(bg_img,text="ATTENDANCE MANAGEMENT SYSTEM",font=("times new roman",24,"bold"))
         title_lbl.place(x=0.,y=0,width=1530,height=45)
 
         main_frame=Frame(bg_img,bd=2,bg="white")
@@ -129,14 +129,14 @@ class Attendance:
         btn_frame=Frame(left_inside_frame,bd=2,relief=RIDGE,bg="white")
         btn_frame.place(x=0,y=300,width=715,height=35)
 
-        save_btn=Button(btn_frame,text="Import csv",command=self.importCsv,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
-        save_btn.grid(row=0,column=0)
+        import_btn=Button(btn_frame,text="Import csv",command=self.importCsv,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+        import_btn.grid(row=0,column=0)
 
-        update_btn=Button(btn_frame,text="Export csv",command=self.exportCsv,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
-        update_btn.grid(row=0,column=1)
+        export_btn=Button(btn_frame,text="Export csv",command=self.exportCsv,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+        export_btn.grid(row=0,column=1)
 
-        delete_btn=Button(btn_frame,text="Update",width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
-        delete_btn.grid(row=0,column=2)
+        update_btn=Button(btn_frame,text="Update",width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
+        update_btn.grid(row=0,column=2)
 
         reset_btn=Button(btn_frame,text="Reset",command=self.reset_data,width=17,font=("times new roman",13,"bold"),bg="blue",fg="white")
         reset_btn.grid(row=0,column=3)
@@ -147,7 +147,7 @@ class Attendance:
         Right_frame.place(x=750,y=10,width=720,height=580)
 
         table_frame=Frame(Right_frame,bd=2,relief=RIDGE,bg="white")
-        table_frame.place(x=5,y=5,width=700,height=455)
+        table_frame.place(x=5,y=5,width=700,height=485)
 
         #======================scroll bar table=====================
         scroll_x=ttk.Scrollbar(table_frame,orient=HORIZONTAL)
@@ -210,7 +210,7 @@ class Attendance:
                 exp_write=csv.writer(myfile,delimiter=",")
                 for i in mydata:
                     exp_write.writerow(i)
-                messagebox.showinfo("Data Export","YOur Data Exported to"+os.path.basename(fln)+"successfully")
+                messagebox.showinfo("Data Export","Your Data Exported to "+os.path.basename(fln)+" successfully")
         except Exception as es:
             messagebox.showerror("Error",f"Due to: {str(es)}",parent=self.root)
 
