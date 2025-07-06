@@ -30,35 +30,35 @@ class Student:
         self.var_teacher=StringVar()
 
         #first image
-        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\students.jpg")
-        img=img.resize((500,130),Image.LANCZOS)
-        self.photoimg=ImageTk.PhotoImage(img)
+        #img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\students.jpg")
+        #img=img.resize((500,130),Image.LANCZOS)
+        #self.photoimg1=ImageTk.PhotoImage(img)
 
-        f_lbl=Label(self.root,image=self.photoimg)
-        f_lbl.place(x=0,y=0,width=500,height=130)
+        #fr_lbl=Label(self.root,image=self.photoimg1)
+        #fr_lbl.place(x=0,y=0,width=500,height=130)'''
 
         #second image
         img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\students.jpg")
         img1=img1.resize((500,130),Image.LANCZOS)
-        self.photoimg=ImageTk.PhotoImage(img1)
+        self.photoimg2=ImageTk.PhotoImage(img1)
 
-        f_lbl=Label(self.root,image=self.photoimg)
-        f_lbl.place(x=500,y=0,width=500,height=130)
+        fg_lbl=Label(self.root,image=self.photoimg2)
+        fg_lbl.place(x=500,y=0,width=500,height=130)
 
         #third image
-        img2=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\social_media_.jpg")
-        img2=img2.resize((500,130),Image.LANCZOS)
-        self.photoimg=ImageTk.PhotoImage(img2)
+        #'''img2=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\students.jpg")
+        #img2=img2.resize((500,130),Image.LANCZOS)
+        #self.photoimg3=ImageTk.PhotoImage(img2)
 
-        f_lbl=Label(self.root,image=self.photoimg)
-        f_lbl.place(x=1000,y=0,width=500,height=130)
+        #f_lbl=Label(self.root,image=self.photoimg3)
+        #f_lbl.place(x=1000,y=0,width=500,height=130)'''
 
         #bgimage
         img3=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\social_media_.jpg")
         img3=img3.resize((1530,710),Image.LANCZOS)
-        self.photoimg3=ImageTk.PhotoImage(img3)
+        self.photoimg4=ImageTk.PhotoImage(img3)
 
-        bg_img=Label(self.root,image=self.photoimg3)
+        bg_img=Label(self.root,image=self.photoimg4)
         bg_img.place(x=0,y=130,width=1530,height=710)
 
         title_lbl=Label(bg_img,text="STUDENT DETAILS",font=("times new roman",35,"bold"),bg="white",fg="red")

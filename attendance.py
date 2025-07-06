@@ -24,20 +24,28 @@ class Attendance:
         self.var_atten_attendance=StringVar()
 
         #first image
-        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\social_media_.jpg")
-        img=img.resize((800,200),Image.LANCZOS)
+        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\att.webp")
+        img=img.resize((790,200),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
         f_lbl=Label(self.root,image=self.photoimg)
-        f_lbl.place(x=0,y=0,width=800,height=200)
+        f_lbl.place(x=370,y=0,width=800,height=200)
 
         #second image
-        img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\social_media_.jpg")
-        img1=img1.resize((800,200),Image.LANCZOS)
+        img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\preAbs.webp")
+        img1=img1.resize((490,200),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
         f_lbl=Label(self.root,image=self.photoimg1)
-        f_lbl.place(x=800,y=0,width=800,height=200)
+        f_lbl.place(x=0,y=0,width=380,height=200)
+
+        #third image
+        imgg=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\preAbs.webp")
+        imgg=imgg.resize((490,200),Image.LANCZOS)
+        self.photoimgg=ImageTk.PhotoImage(imgg)
+
+        f_lbl=Label(self.root,image=self.photoimgg)
+        f_lbl.place(x=1160,y=0,width=380,height=200)
 
 
         #bgimage

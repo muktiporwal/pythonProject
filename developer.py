@@ -32,11 +32,8 @@ class Developer:
         bg_label.place(x=0,y=0,relwidth=1,relheight=1)
 
         #Developer iNFO
-        dev_label=Label(main_frame,text="Hello",font=("times new roman",20,"bold"),bg="white")
-        dev_label.place(x=0,y=5)
-
-        dev_label=Label(main_frame,text="I am a developer",font=("times new roman",20,"bold"),bg="white")
-        dev_label.place(x=0,y=40)
+        dev_label=Label(main_frame,text="Hello\nI am a developer\n Learning about more languages and     \nbuilding projects.",font=("times new roman",20,"bold"))
+        dev_label.place(x=13,y=0)
 
 
 if __name__=="__main__":

@@ -11,7 +11,7 @@ class Train:
         self.root.geometry("1530x790+0+0")
         self.root.title("Face Recognition system")
 
-        img_top=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\helpdesk.jpg")
+        img_top=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\datasetimg.jpeg")
         img_top=img_top.resize((1530,790),Image.LANCZOS)
         self.photoimg_top=ImageTk.PhotoImage(img_top)
 
