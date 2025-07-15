@@ -24,7 +24,7 @@ class Attendance:
         self.var_atten_attendance=StringVar()
 
         #first image
-        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\att.webp")
+        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\att.webp")
         img=img.resize((790,200),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
@@ -32,7 +32,7 @@ class Attendance:
         f_lbl.place(x=370,y=0,width=800,height=200)
 
         #second image
-        img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\preAbs.webp")
+        img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\preAbs.webp")
         img1=img1.resize((490,200),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
@@ -40,7 +40,7 @@ class Attendance:
         f_lbl.place(x=0,y=0,width=380,height=200)
 
         #third image
-        imgg=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\preAbs.webp")
+        imgg=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\preAbs.webp")
         imgg=imgg.resize((490,200),Image.LANCZOS)
         self.photoimgg=ImageTk.PhotoImage(imgg)
 
@@ -49,7 +49,7 @@ class Attendance:
 
 
         #bgimage
-        img3=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\social_media_.jpg")
+        img3=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\social_media_.jpg")
         img3=img3.resize((1530,710),Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -67,7 +67,7 @@ class Attendance:
         Left_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Attendance Details", font=("times new roman",12,"bold"))
         Left_frame.place(x=10,y=10,width=730,height=580)
 
-        img_left=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\social_media_.jpg")
+        img_left=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\social_media_.jpg")
         img_left=img_left.resize((720,130),Image.LANCZOS)
         self.photoimg_left=ImageTk.PhotoImage(img_left)
 

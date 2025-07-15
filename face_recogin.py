@@ -20,7 +20,7 @@ class Face_Recognition:
         title_lb1.place(x=0,y=0,width=1530,height=45)
 
         #bg image
-        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\face_ai.jpg")
+        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\face_ai.jpg")
         img=img.resize((1550,800),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 

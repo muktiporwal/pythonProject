@@ -12,7 +12,7 @@ class Face_Recognition_Systemm:
         self.root.title("Face Recognition System")
         
         #bg image
-        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\face.jpg")
+        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\face.jpg")
         img=img.resize((1550,800),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 

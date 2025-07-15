@@ -17,7 +17,7 @@ class Face_Recognition_System:
         self.root.title("face Recognition System")
         
         #bg image
-        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\backg.jpg")
+        img=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\backg.jpg")
         img=img.resize((1550,800),Image.LANCZOS)
         self.photoimg=ImageTk.PhotoImage(img)
 
@@ -29,7 +29,7 @@ class Face_Recognition_System:
 
         #student button
 
-        img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\details.jpg")
+        img1=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\details.jpg")
         img1=img1.resize((220,220),Image.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
@@ -42,7 +42,7 @@ class Face_Recognition_System:
 
         #detect face button
 
-        img2=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\facee.webp")
+        img2=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\facee.webp")
         img2=img2.resize((220,220),Image.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
@@ -55,7 +55,7 @@ class Face_Recognition_System:
 
         #Attendance button
 
-        img3=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\attendance.jpg")
+        img3=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\attendance.jpg")
         img3=img3.resize((220,220),Image.LANCZOS)
         self.photoimg3=ImageTk.PhotoImage(img3)
 
@@ -68,7 +68,7 @@ class Face_Recognition_System:
 
         #help desk button
 
-        img4=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\support.webp")
+        img4=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\support.webp")
         img4=img4.resize((220,220),Image.LANCZOS)
         self.photoimg4=ImageTk.PhotoImage(img4)
 
@@ -79,7 +79,7 @@ class Face_Recognition_System:
         b1_1.place(x=1150,y=300,width=220,height=40)
 
         #photos face button
-        img5=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\cam.jpg")
+        img5=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\cam.jpg")
         img5=img5.resize((220,220),Image.LANCZOS)
         self.photoimg5=ImageTk.PhotoImage(img5)
 
@@ -92,7 +92,7 @@ class Face_Recognition_System:
         
         #train face button
 
-        img6=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\trainn.webp")
+        img6=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\trainn.webp")
         img6=img6.resize((220,220),Image.LANCZOS)
         self.photoimg6=ImageTk.PhotoImage(img6)
 
@@ -105,7 +105,7 @@ class Face_Recognition_System:
 
         #developer button
 
-        img7=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\dev.png")
+        img7=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\dev.png")
         img7=img7.resize((220,220),Image.LANCZOS)
         self.photoimg7=ImageTk.PhotoImage(img7)
 
@@ -117,7 +117,7 @@ class Face_Recognition_System:
         
         #exit button
 
-        img8=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonncodes\exitt.webp")
+        img8=Image.open(r"C:\Users\HP\OneDrive\Desktop\pythonproject\exitt.webp")
         img8=img8.resize((220,220),Image.LANCZOS)
         self.photoimg8=ImageTk.PhotoImage(img8)
 
